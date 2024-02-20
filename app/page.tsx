@@ -1,7 +1,11 @@
-import Image from 'next/image'
+import Homepage from "@/pages/homepage/Homepage";
+
+
 
 export default function Home() {
   return (
-    <div>HomePage</div>
+    <div>
+      <Homepage />
+    </div>
   )
 }

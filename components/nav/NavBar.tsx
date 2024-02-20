@@ -10,6 +10,8 @@ import Mac from '../../public/assets/mac.png'
 import { CgProfile } from "react-icons/cg";
 import Image from 'next/image';
 import { RiFacebookFill } from "react-icons/ri";
+import Discover from './Discover';
+import Original from './Original';
 
 
 const NavBar = () => {
@@ -17,8 +19,28 @@ const NavBar = () => {
   const [searchNav, setSearchNav] = useState(false);
   const [signInNav, setSignInNav] = useState(false);
 
+  const [isDiscoverVisible, setDiscoverVisible] = useState(false);
+  const handleMouseEnter = () => {
+    setDiscoverVisible((isDiscoverVisible) => !isDiscoverVisible);
+  };
+
+
+  const handleMouseLeave = () => {
+    setDiscoverVisible(false);
+  };
+
+  const [isOriginalVisible, setOriginalVisible] = useState(false);
+  const handleMouseEnter2 = () => {
+    setOriginalVisible((isOriginalVisible) => !isOriginalVisible);
+  };
+
+
+  const handleMouseLeave2 = () => {
+    setOriginalVisible(false);
+  };
+
   return (
-    <div className='md:border-b-[0.1px] border-slate-500 w-[100%] px-4 py-4 overflow-hidden flex-col items-center gap-6'>
+    <div className='md:border-b-[0.1px] border-slate-500 w-[100%] px-4 py-4 overflow-hidden flex-col items-center fixed z-50 gap-6 bg-black'>
       <div className='flex items-center justify-between mx-auto'>
         <div className='flex items-center gap-3'>
           <Link href={"/"} className='font-medium text-[16] border-r-[0.1px] pr-3 border-slate-800 flex gap-1'>
@@ -34,16 +56,24 @@ const NavBar = () => {
           <IoSearchOutline  size={20} className='text-[#ffa200]'/>
           <input type='text' placeholder='Search for artists, songs, albums!' className='border-none outline-none w-full bg-transparent text-white'/>
         </div>
-        <div className='hidden lg:flex items-center gap-4 text-[15px]'>
-          <Link href={"/"} className='transition hover:text-[#ffa200] font-bold'>
-            DISCOVER
-          </Link>
-          <Link href={"/"} className='transition hover:text-[#ffa200] font-bold'>
+        <div className='hidden lg:flex items-center gap-4 text-[15px] '>
+          <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Link href={"/"} className='transition hover:text-[#ffa200] font-bold ' >
+              DISCOVER
+            </Link>
+            {isDiscoverVisible && <Discover />}
+          </div>
+          
+          <Link href={"/"} className='transition hover:text-[#ffa200] font-bold '>
             PLAYLIST
           </Link>
-          <Link href={"/"} className='transition hover:text-[#ffa200] font-bold'>
-            ORIGINALS
-          </Link>
+          <div onMouseEnter={handleMouseEnter2} onMouseLeave={handleMouseLeave2}>
+            <Link href={"/"} className='transition hover:text-[#ffa200] font-bold' >
+              ORIGINALS
+              
+            </Link>
+            {isOriginalVisible && <Original />}
+          </div>
         </div>
         <div className='hidden md:flex items-center lg:gap-4 '>
           <div className='flex items-center w-[250px] gap-2 md:text-[16px] lg:text-[18px]'>
@@ -133,7 +163,7 @@ const NavBar = () => {
 
         </div>
       </div>
-      <div className='flex md:hidden items-center justify-center gap-4 text-[15px] mt-6'>
+      <div className='flex md:hidden items-center justify-center md:gap-4 gap-2 md:text-[15px] text-[12px]  mt-6'>
           <Link href={"/"} className='transition hover:border-gray-300 font-bold border-[0.5px] py-1 px-3 rounded-[16px] border-slate-500 '
             id="background-color">
             Discover
