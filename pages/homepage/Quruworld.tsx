@@ -60,7 +60,7 @@ const QuruWorld = () => {
                   <Link  href={list.href}>
                   <img src={list.src} alt={list.firstName} className='rounded-md'/>
                   </Link>
-                  <div className='p-3 bg-[#ffa200] rounded-full absolute right-6 top-[60%] text-black hidden  transition group-hover:flex items-center justify-center cursor-pointer'>
+                  <div className='p-2 md:p-3 bg-[#ffa200] rounded-full absolute right-6 md:top-[55%] top-[45%] text-black hidden  transition group-hover:flex items-center justify-center cursor-pointer'>
                   <FaPlay size={24} /> 
                   
                   </div>

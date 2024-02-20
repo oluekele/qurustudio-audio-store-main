@@ -61,7 +61,7 @@ const QuruPlaylist = () => {
                   <Link  href={item.href}>
                   <img src={item.src} alt={item.firstName} className='rounded-md'/>
                   </Link>
-                  <div className='p-2 bg-[#ffa200] rounded-full absolute right-6 top-[55%] text-black hidden  transition group-hover:flex items-center justify-center cursor-pointer'>
+                  <div className='p-2 md:p-3 bg-[#ffa200] rounded-full absolute right-6 md:top-[55%] top-[45%] text-black hidden  transition group-hover:flex items-center justify-center cursor-pointer'>
                   <FaPlay size={20} /> 
                   
                   </div>
