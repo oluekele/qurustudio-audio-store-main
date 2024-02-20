@@ -45,7 +45,7 @@ const QuruWorld = () => {
     <div className="overflow-x-hidden ">
       
       <div className='flex flex-col  gap-4 overflow-x-hidden mb-6 relative'>
-        <div className='flex  items-center justify-between  w-[95%]'>
+        <div className='flex  items-center justify-between  w-[93%]'>
           <h2 className='lg:text-[16px] text-[12px]'>QURUSTUDIO WORLD</h2>
           <p className='text-[#ffa200] md:text-[14px] text-[12px]'>VIEW All</p>
         </div>
@@ -56,7 +56,7 @@ const QuruWorld = () => {
           {
             quruData.map((list) =>(
               <>
-                <div key={list.id} className='flex flex-col items-center justify-center md:w-[240px] w-[160px] relative group'>
+                <div key={list.id} className='flex flex-col items-center justify-center md:w-[240px] w-[155px] relative group'>
                   <Link  href={list.href}>
                   <img src={list.src} alt={list.firstName} className='rounded-md'/>
                   </Link>

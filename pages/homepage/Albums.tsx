@@ -44,7 +44,7 @@ const AlbumsList = () => {
     <div className="overflow-x-hidden">
       
       <div className='flex flex-col  gap-4 overflow-x-hidden mb-6 relative'>
-        <div className='flex  items-center justify-between w-[95%]'>
+        <div className='flex  items-center justify-between w-[93%]'>
           <h2 className='lg:text-[16px] text-[14px]'>TREADING ALBUMS</h2>
           <p className='text-[#ffa200] md:text-[14px] text-[12px]'>VIEW All</p>
         </div>
@@ -55,7 +55,7 @@ const AlbumsList = () => {
           {
             albums.map((list) =>(
               <>
-                <div key={list.id} className='flex flex-col items-center justify-center md:w-[240px] w-[160px] relative group'>
+                <div key={list.id} className='flex flex-col items-center justify-center md:w-[240px] w-[155px] relative group'>
                   <Link  href={list.href}>
                   <img src={list.src} alt={list.firstName} width={240} height={240} className='rounded-md'/>
                   </Link>
