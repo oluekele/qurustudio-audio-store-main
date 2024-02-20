@@ -16,7 +16,7 @@ const TreadingSong = () => {
 
 
   
-  const myTreading = (input, offset) => {
+  const myTreading = (input:number, offset:number) => {
     setResult(result + input)
 
     const container = document.getElementById("container")
@@ -31,7 +31,9 @@ const TreadingSong = () => {
       setResult(-1)
     }
     console.log(result)
+   if(container){
     container.style.translate = `${result * offset}px`
+   }
   }
   
 

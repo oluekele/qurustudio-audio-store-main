@@ -6,6 +6,7 @@ import { FaPlay } from "react-icons/fa6";
 import { FaChevronLeft } from "react-icons/fa";
 
 import Albums from '@/data/AlbumsData';
+import Image from 'next/image';
 
 
 const AlbumsList = () => {
@@ -16,7 +17,7 @@ const AlbumsList = () => {
 
 
   
-  const myAlbums = (newInput, offset) => {
+  const myAlbums = (newInput:number, offset: number) => {
     setAlmusic(almusic + newInput)
 
     const containerAlbums = document.getElementById("containerAlbums")
@@ -31,7 +32,9 @@ const AlbumsList = () => {
       setAlmusic(-1)
     }
     console.log(almusic)
+    if(containerAlbums){
     containerAlbums.style.translate = `${almusic * offset}px`
+    }
   }
   
 
@@ -39,7 +42,6 @@ const AlbumsList = () => {
   
   return (
     <div className="overflow-x-hidden">
-      
       
       <div className='flex flex-col  gap-4 overflow-x-hidden mb-6 relative'>
         <div className='flex  items-center justify-between w-[95%]'>
@@ -55,7 +57,7 @@ const AlbumsList = () => {
               <>
                 <div key={list.id} className='flex flex-col items-center justify-center md:w-[240px] w-[160px] relative group'>
                   <Link  href={list.href}>
-                  <img src={list.src} alt={list.firstName} className='rounded-md'/>
+                  <img src={list.src} alt={list.firstName} width={240} height={240} className='rounded-md'/>
                   </Link>
                   <div className='p-2 bg-[#ffa200] rounded-full absolute right-6 top-[55%] text-black hidden  transition group-hover:flex items-center justify-center cursor-pointer'>
                   <FaPlay size={20} /> 

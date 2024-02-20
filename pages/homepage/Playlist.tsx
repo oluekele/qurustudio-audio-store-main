@@ -18,7 +18,7 @@ const QuruPlaylist = () => {
 
 
   
-  const myTreading = (inputPlay, offsetPlay) => {
+  const myTreading = (inputPlay:number, offsetPlay:number) => {
     setResultPlay(resultPlay + inputPlay)
 
     const containerPlay = document.getElementById("containerPlay")
@@ -33,7 +33,9 @@ const QuruPlaylist = () => {
       setResultPlay(-1)
     }
     console.log(resultPlay)
-    containerPlay.style.translate = `${resultPlay * offsetPlay}px`
+    if(containerPlay){
+      containerPlay.style.translate = `${resultPlay * offsetPlay}px`
+    }
   }
   
 

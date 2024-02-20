@@ -17,10 +17,10 @@ const QuruWorld = () => {
 
 
   
-  const myTreading = (inputWorld, offsetWorld) => {
+  const myTreading = (inputWorld:number, offsetWorld:number) => {
     setResultWorld(resultWorld + inputWorld)
 
-    const container = document.getElementById("containerWorld")
+    const containerWorld= document.getElementById("containerWorld")
     if(resultWorld.valueOf() <= -4){
       setResultWorld(0)
       
@@ -32,7 +32,10 @@ const QuruWorld = () => {
       setResultWorld(-1)
     }
     console.log(resultWorld)
-    containerWorld.style.translate = `${resultWorld * offsetWorld}px`
+    if(containerWorld){
+      containerWorld.style.translate = `${resultWorld * offsetWorld}px`
+    }
+    
   }
   
 
