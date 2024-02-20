@@ -45,8 +45,8 @@ const AlbumsList = () => {
       
       <div className='flex flex-col  gap-4 overflow-x-hidden mb-6 relative'>
         <div className='flex  items-center justify-between w-[93%]'>
-          <h2 className='lg:text-[16px] text-[14px]'>TREADING ALBUMS</h2>
-          <p className='text-[#ffa200] md:text-[14px] text-[12px]'>VIEW All</p>
+          <h2 className='lg:text-[16px] text-[12px]'>TREADING ALBUMS</h2>
+          <p className='text-[#ffa200] md:text-[14px] text-[10px]'>VIEW All</p>
         </div>
           < FaChevronLeft size={40} className='p-3 rounded-full bg-[#ffa200] text-black absolute top-[40%] cursor-pointer font-light z-10 left-5 opacity-0 hover:opacity-100' onClick={()=> myAlbums(-1, 250)}/>
           < FaAngleRight size={40} className='p-3 rounded-full bg-[#ffa200] text-black absolute top-[40%] cursor-pointer font-light z-10 right-5  transition opacity-0 hover:opacity-100' onClick={()=> myAlbums(+1, 250)}/>

@@ -47,7 +47,7 @@ const QuruPlaylist = () => {
       
       <div className='flex flex-col  gap-4 overflow-x-hidden mb-6 relative'>
         <div className='flex  items-center justify-between   w-[93%]'>
-          <h2 className='md:text-[16px] text-[14px]'>TOP QURUSTUDIO PLAYLIST</h2>
+          <h2 className='md:text-[16px] text-[12px]'>TOP QURUSTUDIO PLAYLIST</h2>
           <p className='text-[#ffa200] md:text-[14px] text-[10px]'>VIEW All</p>
         </div>
         
