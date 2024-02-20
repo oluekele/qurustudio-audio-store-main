@@ -34,21 +34,7 @@ const TreadingSong = () => {
     container.style.translate = `${result * offset}px`
   }
   
-  // const [isIcon, setIsIcon] = useState(true)
-  // const handleIcon =()=>{
-  //   if(!isIcon){
-  //     setIsIcon(
-  //       document.getElementById('playIcon')?.style.display == 'flex' &&
-  //       document.getElementById('pauseIcon')?.style.display == 'none'
-  //     )
-  //   }
-  //   else if(isIcon){
-  //     setIsIcon(
-  //       document.getElementById('playIcon')?.style.display == 'none' &&
-  //       document.getElementById('pauseIcon')?.style.display == 'flex'
-  //     )
-  //   }
-  // }
+
   
   return (
     <div className="overflow-x-hidden ">

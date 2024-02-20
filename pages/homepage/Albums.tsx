@@ -16,8 +16,8 @@ const AlbumsList = () => {
 
 
   
-  const myAlbums = (inputAlbums, offsetAlbums) => {
-    setAlmusic(almusic + inputAlbums)
+  const myAlbums = (newInput, offset) => {
+    setAlmusic(almusic + newInput)
 
     const containerAlbums = document.getElementById("containerAlbums")
     if(almusic.valueOf() <= -4){
@@ -31,7 +31,7 @@ const AlbumsList = () => {
       setAlmusic(-1)
     }
     console.log(almusic)
-    containerAlbums.style.translate = `${almusic * offsetAlbums}px`
+    containerAlbums.style.translate = `${almusic * offset}px`
   }
   
 
