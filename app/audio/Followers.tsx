@@ -13,7 +13,7 @@ const Followers = () => {
           <h2 className='flex items-center gap-2 font-bold text-[25px]'>King Perryy <IoMdCheckmark size={24} className='bg-[#ffa200] text-black p-1 mt-2 rounded-full'/></h2>
           <span className='text-[#999999] text-[20px] my-2 hover:text-[#ffa200] hover:underline cursor-pointer'>@kingperryy</span>
         </div>
-        <button className='py-2 px-5 font-bold lg:text-[25px] md:text-[20px]  border-[3px] border-[#ffa200] flex items-center justify-start mt-2 md:w-[150px] rounded-full'>FOLLOW</button>
+        <button className='py-2 px-5 font-bold lg:text-[25px] md:text-[20px] lg:ml-[-30px]  border-[3px] border-[#ffa200] flex items-center justify-start mt-2 md:w-[150px] rounded-full'>FOLLOW</button>
       </div>
       <div className=' md:py-8  lg:border-b-[0.1px] lg:border-gray-700 flex flex-col'>
         <h2 className='flex items-center gap-2 font-bold text-[25px] w-[70%]'>Top Supporters</h2>

@@ -1,18 +1,20 @@
+'use client'
 import { IoMdCheckmark } from "react-icons/io";
-import React from 'react'
+import React, { useState } from 'react'
 import Link from "next/link";
 import { FaRegHeart } from "react-icons/fa6";
 import { RiPlayListAddLine } from "react-icons/ri";
 import { MdOutlineRepeat } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { HiDotsHorizontal } from "react-icons/hi";
-import { IoPlaySharp } from "react-icons/io5";
+import { IoPlaySharp, IoPauseSharp } from "react-icons/io5";
 import Image from "next/image";
 import Waveform from '../../public/assets/wave2.png.png'
 import { FaRegRegistered } from "react-icons/fa";
 
 const AudioPlayer = () => {
 
+  const [isActive, setIsActive] = useState(false)
 
   
 
@@ -56,7 +58,15 @@ const AudioPlayer = () => {
         </div>
       </div>
       <div className="flex items-center gap-4 mb-4 relative mt-6">
-        <IoPlaySharp size={60} className="border-[3px] border-[#fff] p-3 rounded-full cursor-pointer"/>
+      <div >
+          { !isActive? <IoPlaySharp size={60} className="border-[3px] border-[#fff] p-3 rounded-full cursor-pointer" onClick={()=>{
+            setIsActive(!isActive); console.log('clicked')}}/>:
+          <IoPauseSharp size={60} className="border-[3px] border-[#fff] p-3 rounded-full cursor-pointer" onClick={()=>{
+            setIsActive(!isActive)
+          }}/>
+          }
+         
+        </div>
         <div className="flex items-center w-[80%] gap-2 relative">
           <span className="font-bold absolute text-[20px] select-none">0:00</span>
           <Image src={Waveform} alt='waveform' width={0} height={0} className="h-[70px] "/>
