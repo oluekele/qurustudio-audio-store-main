@@ -58,7 +58,7 @@ const AudioPlayer = () => {
         </div>
       </div>
       <div className="flex items-center gap-4 mb-4 relative mt-6">
-      <div >
+        <div>
           { !isActive? <IoPlaySharp size={60} className="border-[3px] border-[#fff] p-3 rounded-full cursor-pointer" onClick={()=>{
             setIsActive(!isActive); console.log('clicked')}}/>:
           <IoPauseSharp size={60} className="border-[3px] border-[#fff] p-3 rounded-full cursor-pointer" onClick={()=>{
@@ -67,6 +67,7 @@ const AudioPlayer = () => {
           }
          
         </div>
+        <audio src=""></audio>
         <div className="flex items-center w-[80%] gap-2 relative">
           <span className="font-bold absolute text-[20px] select-none">0:00</span>
           <Image src={Waveform} alt='waveform' width={0} height={0} className="h-[70px] "/>
