@@ -58,7 +58,7 @@ const TreadingSong = () => {
             <>
             
               <div key={item.id} className='flex flex-col items-center justify-center md:w-[240px] w-[155px] relative group' >
-                  <Link  href={item.href} className=''>
+                  <Link  href="/audio" className=''>
                   <img src={item.src} alt={item.firstName} className='rounded-md' />
                   
                   </Link>

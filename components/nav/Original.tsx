@@ -4,7 +4,7 @@ import { GoLinkExternal } from "react-icons/go";
 
 const Original = () => {
   return (
-    <div className='flex flex-col  absolute top-[50px] rounded-md  bg-[#212121] p-3 gap-2 text-[15px] z-10 left-[60%]'>
+    <div className='flex flex-col  absolute top-[50px] left-[60.5%] rounded-md border-[1px] border-[#212121] shadow-lg  bg-[#212121] p-3 gap-2 text-[15px] z-50'>
     <Link href={"/"} className='transition hover:text-[#ffa200] font-bold'>
       Quru World
     </Link>

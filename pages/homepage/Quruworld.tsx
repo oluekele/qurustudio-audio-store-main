@@ -57,7 +57,7 @@ const QuruWorld = () => {
             quruData.map((list) =>(
               <>
                 <div key={list.id} className='flex flex-col items-center justify-center md:w-[240px] w-[155px] relative group'>
-                  <Link  href={list.href}>
+                  <Link  href="/audio">
                   <img src={list.src} alt={list.firstName} className='rounded-md'/>
                   </Link>
                   <div className='p-2 md:p-3 bg-[#ffa200] rounded-full absolute right-6 md:top-[55%] top-[45%] text-black hidden  transition group-hover:flex items-center justify-center cursor-pointer'>

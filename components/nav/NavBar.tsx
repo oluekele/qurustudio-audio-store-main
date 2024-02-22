@@ -40,7 +40,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className='md:border-b-[0.1px] border-slate-500 w-[100%] px-4 py-4 overflow-hidden flex-col items-center fixed z-50 gap-6 bg-black'>
+    <div className='md:border-b-[0.1px] border-slate-500 w-[100%] px-4 py-4  flex-col items-center fixed z-50 gap-6 bg-black'>
       <div className='flex items-center justify-between mx-auto'>
         <div className='flex items-center gap-3'>
           <Link href={"/"} className='font-medium text-[16] border-r-[0.1px] pr-3 border-slate-800 flex gap-1'>
@@ -58,7 +58,7 @@ const NavBar = () => {
         </div>
         <div className='hidden lg:flex items-center gap-4 text-[15px] '>
           <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <Link href={"/"} className='transition hover:text-[#ffa200] font-bold ' >
+            <Link href="/audio" className='transition hover:text-[#ffa200] font-bold ' >
               DISCOVER
             </Link>
             {isDiscoverVisible && <Discover />}
